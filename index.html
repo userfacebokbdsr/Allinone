@@ -8,22 +8,21 @@
         body {
             font-family: 'Poppins', sans-serif;
             text-align: center;
-            background: linear-gradient(135deg, #007BFF, #6610f2);
-            color: white;
+            background: #f3f3f3;
             margin: 0;
             padding: 0;
         }h1 {
         font-family: 'Montserrat', sans-serif;
+        color: white;
         margin-top: 20px;
         padding: 15px 30px;
-        font-size: 32px;
+        font-size: 28px;
         font-weight: bold;
         border-radius: 10px;
         display: inline-block;
-        background: rgba(255, 255, 255, 0.2);
-        backdrop-filter: blur(10px);
-        letter-spacing: 2px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        background: #007BFF;
+        letter-spacing: 1.5px;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
     }
 
     .app-container {
@@ -36,17 +35,17 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        background: rgba(255, 255, 255, 0.1);
+        background: white;
         padding: 15px;
         margin: 15px 0;
         border-radius: 15px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
         transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     }
 
     .app-item:hover {
         transform: scale(1.05);
-        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+        box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
     }
 
     .app-info {
@@ -56,64 +55,58 @@
     }
 
     .app-icon {
-        width: 70px;
-        height: 70px;
+        width: 65px;
+        height: 65px;
         border-radius: 15px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-        transition: transform 0.3s ease-in-out;
-    }
-
-    .app-item:hover .app-icon {
-        transform: rotate(10deg) scale(1.1);
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
     }
 
     .app-details h2 {
         font-family: 'Montserrat', sans-serif;
         font-size: 18px;
         font-weight: bold;
-        color: white;
+        color: #333;
         margin: 0;
     }
 
     .download-btn {
         padding: 10px 18px;
-        background: #28a745;
+        background: linear-gradient(45deg, #007BFF, #0056b3);
         color: white;
         text-decoration: none;
         border-radius: 8px;
         font-size: 14px;
         font-weight: bold;
         transition: 0.3s;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
     }
 
     .download-btn:hover {
-        background: #218838;
-        transform: scale(1.1);
+        background: darkblue;
     }
 
     .telegram-icon {
         position: fixed;
         bottom: 20px;
         right: 20px;
-        width: 70px;
-        height: 70px;
+        width: 60px;
+        height: 60px;
         background: #0088cc;
         border-radius: 50%;
         display: flex;
         justify-content: center;
         align-items: center;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
         transition: transform 0.3s ease-in-out;
     }
 
     .telegram-icon:hover {
-        transform: scale(1.2);
+        transform: scale(1.1);
     }
 
     .telegram-icon img {
-        width: 45px;
-        height: 45px;
+        width: 40px;
+        height: 40px;
     }
 </style>
 
@@ -133,22 +126,22 @@
                 {name: "Work Snap", icon: "https://i.ibb.co/SwNp0Ndk/WorkSnap.png", link: "https://shorturl.at/3nvLx"},
                 {name: "Zentus", icon: "https://i.ibb.co/99JXtdSg/Zentus.png", link: "https://shorturl.at/AvlOf"},
                 {name: "Flicket", icon: "https://i.ibb.co/8D2jNQ9G/Flicket.png", link: "https://shorturl.at/7RCEe"}
-            ];
-            apps.forEach(app => {
-                document.write(`
-                    <div class="app-item">
-                        <div class="app-info">
-                            <img src="${app.icon}" class="app-icon">
-                            <div class="app-details"><h2>${app.name}</h2></div>
-                        </div>
-                        <a href="${app.link}" class="download-btn">⬇ Download</a>
+            ];apps.forEach(app => {
+            document.write(`
+                <div class="app-item">
+                    <div class="app-info">
+                        <img src="${app.icon}" class="app-icon">
+                        <div class="app-details"><h2>${app.name}</h2></div>
                     </div>
-                `);
-            });
-        </script>
-    </div>
-    <a href="https://t.me/SFAEarnings" class="telegram-icon" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram">
-    </a>
+                    <a href="${app.link}" class="download-btn">⬇ Download</a>
+                </div>
+            `);
+        });
+    </script>
+</div>
+<a href="https://t.me/SFAEarnings" class="telegram-icon" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram">
+</a>
+
 </body>
 </html>
