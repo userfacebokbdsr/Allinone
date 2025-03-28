@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work From Home Apps</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@500&display=swap" rel="stylesheet">
+
+    <style>
+        /* Attractive Animated Background */
+        body {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            background: linear-gradient(-45deg, #ff9a9e, #fad0c4, #ffdde1, #f3e6e8);
+            background-size: 400% 400%;
+            animation: gradientBG 8s ease infinite;
+            margin: 0;
+            padding: 0;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            color: white;
+            margin-top: 20px;
+            padding: 15px;
+            font-size: 28px;
+            font-weight: bold;
+            border-radius: 10px;
+            display: inline-block;
+            background: linear-gradient(45deg, #ff0000, #ff7300, #ffeb00, #00ff00);
+            background-size: 300% 300%;
+            animation: glow 3s linear infinite;
+            letter-spacing: 1.5px;
+            text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.8);
+        }
+
+        @keyframes glow {
+            0% { background-position: 0% 50%; box-shadow: 0 0 10px #ff0000; }
+            50% { background-position: 100% 50%; box-shadow: 0 0 20px #ff7300; }
+            100% { background-position: 0% 50%; box-shadow: 0 0 30px #ffeb00; }
+        }
+
+        .app-container {
+            width: 85%;
+            margin: auto;
+        }
+
+        .app-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: white;
+            padding: 15px;
+            margin: 12px 0;
+            border-radius: 15px;
+            box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .app-item:hover {
+            transform: scale(1.05);
+        }
+
+        .app-info {
+            display: flex;
+            align-items: center;
+            background: #ffffff;
+            padding: 10px;
+            border-radius: 15px;
+            box-shadow: inset 2px 2px 8px rgba(0, 0, 0, 0.1), inset -2px -2px 8px rgba(255, 255, 255, 0.8);
+        }
+
+        .app-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 12px;
+            margin-right: 15px;
+        }
+
+        .app-details {
+            text-align: left;
+        }
+
+        .app-details h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin: 0;
+        }
+
+        .app-details p {
+            font-size: 14px;
+            color: #666;
+            margin: 3px 0;
+        }
+
+        .download-btn {
+            font-family: 'Poppins', sans-serif;
+            padding: 12px 20px;
+            background: blue;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+            font-weight: bold;
+            transition: 0.3s;
+            margin-left: 10px;
+        }
+
+        .download-btn:hover {
+            background: darkblue;
+        }
+    </style>
+</head>
+<body>
+    <h1>Agents Work From At Home</h1>
+    
+    <div class="app-container">
+        <!-- First App -->
+        <div class="app-item">
+            <div class="app-info">
+                <img src="https://i.ibb.co/NdSXgSkf/Regression.png" alt="Regression App Icon" class="app-icon">
+                <div class="app-details">
+                    <h2>Regression</h2>
+                    <p>🎁 <b>Sign Up Bonus:</b> ₹30</p>
+                    <p>🏦 <b>Minimum Withdraw:</b> ₹100</p>
+                </div>
+            </div>
+            <a href="https://rb.gy/o8gj1z" class="download-btn">⬇ Download</a>
+        </div>
+
+        <!-- Second App -->
+        <div class="app-item">
+            <div class="app-info">
+                <img src="https://i.ibb.co/x8YLkVL4/Squares.png" alt="Squares App Icon" class="app-icon">
+                <div class="app-details">
+                    <h2>Squares Build a Dream</h2>
+                    <p>🎁 <b>Sign Up Bonus:</b> ₹50</p>
+                    <p>🏦 <b>Minimum Withdraw:</b> ₹150</p>
+                </div>
+            </div>
+            <a href="https://rb.gy/cm12ca" class="download-btn">⬇ Download</a>
+        </div>
+    </div>
+</body>
+</html>
