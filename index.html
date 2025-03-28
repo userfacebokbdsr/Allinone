@@ -9,7 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@500&display=swap" rel="stylesheet">
 
     <style>
-        /* Background */
         body {
             font-family: 'Poppins', sans-serif;
             text-align: center;
@@ -18,7 +17,6 @@
             padding: 0;
         }
 
-        /* Heading */
         h1 {
             font-family: 'Montserrat', sans-serif;
             color: white;
@@ -28,7 +26,7 @@
             font-weight: bold;
             border-radius: 10px;
             display: inline-block;
-            background: #007BFF; /* Solid Blue Background */
+            background: #007BFF;
             letter-spacing: 1.5px;
             text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
         }
@@ -92,44 +90,90 @@
         .download-btn:hover {
             background: darkblue;
         }
+
+        /* Telegram Icon */
+        .telegram-icon {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background: #0088cc;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .telegram-icon:hover {
+            transform: scale(1.1);
+        }
+
+        .telegram-icon img {
+            width: 40px;
+            height: 40px;
+        }
     </style>
 </head>
 <body>
     <h1>All In One</h1>
     
     <div class="app-container">
-        <!-- First App -->
         <div class="app-item">
             <div class="app-info">
-                <img src="https://i.ibb.co/NdSXgSkf/Regression.png" alt="Regression App Icon" class="app-icon">
-                <div class="app-details">
-                    <h2>Regression</h2>
-                </div>
+                <img src="https://i.ibb.co/NdSXgSkf/Regression.png" class="app-icon">
+                <div class="app-details"><h2>Regression</h2></div>
             </div>
             <a href="https://rb.gy/o8gj1z" class="download-btn">⬇ Download</a>
         </div>
 
-        <!-- Second App -->
         <div class="app-item">
             <div class="app-info">
-                <img src="https://i.ibb.co/x8YLkVL4/Squares.png" alt="Squares App Icon" class="app-icon">
-                <div class="app-details">
-                    <h2>Squares Build a Dream</h2>
-                </div>
+                <img src="https://i.ibb.co/x8YLkVL4/Squares.png" class="app-icon">
+                <div class="app-details"><h2>Squares Build a Dream</h2></div>
             </div>
             <a href="https://rb.gy/cm12ca" class="download-btn">⬇ Download</a>
         </div>
 
-        <!-- Third App (Intercept) -->
         <div class="app-item">
             <div class="app-info">
-                <img src="https://i.ibb.co/6JYR4bsv/Intercept.png" alt="Intercept App Icon" class="app-icon">
-                <div class="app-details">
-                    <h2>Intercept</h2>
-                </div>
+                <img src="https://i.ibb.co/6JYR4bsv/Intercept.png" class="app-icon">
+                <div class="app-details"><h2>Intercept</h2></div>
             </div>
             <a href="https://rb.gy/mne7am" class="download-btn">⬇ Download</a>
         </div>
+
+        <div class="app-item">
+            <div class="app-info">
+                <img src="https://ibb.co/Y7srJgNP" class="app-icon">
+                <div class="app-details"><h2>FlimFlow</h2></div>
+            </div>
+            <a href="https://rb.gy/8wcmhu" class="download-btn">⬇ Download</a>
+        </div>
+
+        <div class="app-item">
+            <div class="app-info">
+                <img src="https://ibb.co/N2MW90WJ" class="app-icon">
+                <div class="app-details"><h2>Range</h2></div>
+            </div>
+            <a href="https://rb.gy/ur0s5t" class="download-btn">⬇ Download</a>
+        </div>
+
+        <div class="app-item">
+            <div class="app-info">
+                <img src="https://ibb.co/PGQcwQbG" class="app-icon">
+                <div class="app-details"><h2>Aryog</h2></div>
+            </div>
+            <a href="https://shorturl.at/44Y9I" class="download-btn">⬇ Download</a>
+        </div>
     </div>
+
+    <!-- Telegram Floating Icon -->
+    <a href="https://t.me/SFAEarnings" class="telegram-icon" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram">
+    </a>
+
 </body>
 </html>
