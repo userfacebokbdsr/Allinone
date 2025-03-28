@@ -1,187 +1,150 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All In One</title>
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <title>All In One</title><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins:wght@500&display=swap" rel="stylesheet">
 
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            text-align: center;
-            background: #f3f3f3;
-            margin: 0;
-            padding: 0;
-        }
+<style>
+    body {
+        font-family: 'Poppins', sans-serif;
+        text-align: center;
+        background: #f3f3f3;
+        margin: 0;
+        padding: 0;
+    }
 
-        h1 {
-            font-family: 'Montserrat', sans-serif;
-            color: white;
-            margin-top: 20px;
-            padding: 15px 30px;
-            font-size: 28px;
-            font-weight: bold;
-            border-radius: 10px;
-            display: inline-block;
-            background: #007BFF;
-            letter-spacing: 1.5px;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-        }
+    h1 {
+        font-family: 'Montserrat', sans-serif;
+        color: white;
+        margin-top: 20px;
+        padding: 15px 30px;
+        font-size: 28px;
+        font-weight: bold;
+        border-radius: 10px;
+        display: inline-block;
+        background: #007BFF;
+        letter-spacing: 1.5px;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    }
 
-        .app-container {
-            width: 90%;
-            max-width: 500px;
-            margin: auto;
-        }
+    .app-container {
+        width: 90%;
+        max-width: 500px;
+        margin: auto;
+    }
 
-        .app-item {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background: white;
-            padding: 15px;
-            margin: 15px 0;
-            border-radius: 15px;
-            box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease-in-out;
-        }
+    .app-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: white;
+        padding: 15px;
+        margin: 15px 0;
+        border-radius: 15px;
+        box-shadow: 3px 3px 15px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease-in-out;
+    }
 
-        .app-item:hover {
-            transform: scale(1.05);
-        }
+    .app-item:hover {
+        transform: scale(1.05);
+    }
 
-        .app-info {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
+    .app-info {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
 
-        .app-icon {
-            width: 65px;
-            height: 65px;
-            border-radius: 15px;
-            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
-        }
+    .app-icon {
+        width: 65px;
+        height: 65px;
+        border-radius: 15px;
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    }
 
-        .app-details h2 {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 18px;
-            font-weight: bold;
-            color: #333;
-            margin: 0;
-        }
+    .app-details h2 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 18px;
+        font-weight: bold;
+        color: #333;
+        margin: 0;
+    }
 
-        .download-btn {
-            font-family: 'Poppins', sans-serif;
-            padding: 10px 18px;
-            background: #007BFF;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-size: 14px;
-            font-weight: bold;
-            transition: 0.3s;
-            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
-        }
+    .download-btn {
+        padding: 10px 18px;
+        background: #007BFF;
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: bold;
+        transition: 0.3s;
+        box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    }
 
-        .download-btn:hover {
-            background: darkblue;
-        }
+    .download-btn:hover {
+        background: darkblue;
+    }
 
-        /* Telegram Icon */
-        .telegram-icon {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 60px;
-            height: 60px;
-            background: #0088cc;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s ease-in-out;
-        }
+    .telegram-icon {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: 60px;
+        height: 60px;
+        background: #0088cc;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease-in-out;
+    }
 
-        .telegram-icon:hover {
-            transform: scale(1.1);
-        }
+    .telegram-icon:hover {
+        transform: scale(1.1);
+    }
 
-        .telegram-icon img {
-            width: 40px;
-            height: 40px;
-        }
-    </style>
+    .telegram-icon img {
+        width: 40px;
+        height: 40px;
+    }
+</style>
+
 </head>
 <body>
-    <h1>All In One</h1>
-    
-    <div class="app-container">
-        <div class="app-item">
-            <div class="app-info">
-                <img src="https://i.ibb.co/NdSXgSkf/Regression.png" class="app-icon">
-                <div class="app-details"><h2>Regression</h2></div>
-            </div>
-            <a href="https://rb.gy/o8gj1z" class="download-btn">⬇ Download</a>
-        </div>
+    <h1>All In One</h1><div class="app-container">
+    <script>
+        let apps = [
+            {name: "Regression", icon: "https://i.ibb.co/NdSXgSkf/Regression.png", link: "https://rb.gy/o8gj1z"},
+            {name: "Squares Build a Dream", icon: "https://i.ibb.co/x8YLkVL4/Squares.png", link: "https://rb.gy/cm12ca"},
+            {name: "Intercept", icon: "https://i.ibb.co/6JYR4bsv/Intercept.png", link: "https://rb.gy/mne7am"},
+            {name: "FlimFlow", icon: "https://i.ibb.co/Y7srJgNP/FlimFlow.png", link: "https://rb.gy/8wcmhu"},
+            {name: "Range", icon: "https://i.ibb.co/N2MW90WJ/Range.png", link: "https://rb.gy/ur0s5t"},
+            {name: "Aryog", icon: "https://i.ibb.co/PGQcwQbG/Aryog.png", link: "https://shorturl.at/44Y9I"},
+            {name: "V-Live", icon: "https://i.ibb.co/1Y54DrjN/V-Live.png", link: "https://shorturl.at/BL5AD"},
+            {name: "Work Snap", icon: "https://i.ibb.co/SwNp0Ndk/WorkSnap.png", link: "https://shorturl.at/3nvLx"},
+            {name: "Zentus", icon: "https://i.ibb.co/99JXtdSg/Zentus.png", link: "https://shorturl.at/AvlOf"},
+            {name: "Flicket", icon: "https://i.ibb.co/8D2jNQ9G/Flicket.png", link: "https://shorturl.at/7RCEe"}
+        ];
 
-        <div class="app-item">
-            <div class="app-info">
-                <img src="https://i.ibb.co/x8YLkVL4/Squares.png" class="app-icon">
-                <div class="app-details"><h2>Squares Build a Dream</h2></div>
-            </div>
-            <a href="https://rb.gy/cm12ca" class="download-btn">⬇ Download</a>
-        </div>
-
-        <div class="app-item">
-            <div class="app-info">
-                <img src="https://i.ibb.co/6JYR4bsv/Intercept.png" class="app-icon">
-                <div class="app-details"><h2>Intercept</h2></div>
-            </div>
-            <a href="https://rb.gy/mne7am" class="download-btn">⬇ Download</a>
-        </div>
-
-        <div class="app-item">
-            <div class="app-info">
-                <img src="https://ibb.co/Y7srJgNP" class="app-icon">
-                <div class="app-details"><h2>FlimFlow</h2></div>
-            </div>
-            <a href="https://rb.gy/8wcmhu" class="download-btn">⬇ Download</a>
-        </div>
-
-        <div class="app-item">
-            <div class="app-info">
-                <img src="https://ibb.co/N2MW90WJ" class="app-icon">
-                <div class="app-details"><h2>Range</h2></div>
-            </div>
-            <a href="https://rb.gy/ur0s5t" class="download-btn">⬇ Download</a>
-        </div>
-
-        <div class="app-item">
-            <div class="app-info">
-                <img src="https://ibb.co/PGQcwQbG" class="app-icon">
-                <div class="app-details"><h2>Aryog</h2></div>
-            </div>
-            <a href="https://shorturl.at/44Y9I" class="download-btn">⬇ Download</a>
-        </div>
-        
-    </div>
-    <div class="app-item">
-    <div class="app-info">
-        <img src="https://i.ibb.co/1Y54DrjN/V-Live.png" class="app-icon">
-        <div class="app-details"><h2>V-Live</h2></div>
-    </div>
-    <a href="https://shorturl.at/BL5AD" class="download-btn">⬇ Download</a>
+        apps.forEach(app => {
+            document.write(`
+                <div class="app-item">
+                    <div class="app-info">
+                        <img src="${app.icon}" class="app-icon">
+                        <div class="app-details"><h2>${app.name}</h2></div>
+                    </div>
+                    <a href="${app.link}" class="download-btn">⬇ Download</a>
+                </div>
+            `);
+        });
+    </script>
 </div>
 
-    <!-- Telegram Floating Icon -->
-    <a href="https://t.me/SFAEarnings" class="telegram-icon" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram">
-    </a>
+<a href="https://t.me/SFAEarnings" class="telegram-icon" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram">
+</a>
 
 </body>
 </html>
