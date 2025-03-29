@@ -5,30 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>All In One</title>
 <script>
-// Prevent right click, view source, and keyboard shortcuts
 document.addEventListener('contextmenu', event => event.preventDefault());
 document.addEventListener('keydown', function(event) {
-    // Block Ctrl+U, Ctrl+S, Ctrl+Shift+I, F12, etc.
-    if (event.ctrlKey && (event.key === 'u' || event.key === 's' || event.key === 'j' || event.key === 'i')) {
-        event.preventDefault();
-    }
-    if (event.key === 'F12' || (event.ctrlKey && event.shiftKey && event.key === 'I')) {
+    if (event.ctrlKey && (event.key === 'u' || event.key === 's' || event.key === 'j')) {
         event.preventDefault();
     }
 });
-
-// Disable text selection
-document.addEventListener('selectstart', function(e) {
-    e.preventDefault();
-});
-
-// Obfuscate the source code further
-window.onload = function() {
-    document.body.innerHTML = document.body.innerHTML.replace(/</g, '&lt;').replace(/>/g, '&gt;');
-    setTimeout(function() {
-        document.body.innerHTML = document.body.innerHTML.replace(/&lt;/g, '<').replace(/&gt;/g, '>');
-    }, 100);
-};
 </script>
 <style>
 body {
@@ -37,10 +19,6 @@ body {
     background: #007BFF;
     margin: 0;
     padding: 0;
-    user-select: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
 }
 h1 {
     font-family: 'Montserrat', sans-serif;
@@ -148,20 +126,27 @@ h1 {
 <h1>All In One</h1>
 <div class="app-container">
 <script>
-// Obfuscated app list
-var _0x3d2a=["\x6A\x73\x6F\x6E","\x70\x61\x72\x73\x65","\x6E\x61\x6D\x65","\x69\x63\x6F\x6E","\x6C\x69\x6E\x6B","\x6D\x61\x70","\x61\x70\x70\x2D\x69\x74\x65\x6D","\x69\x6E\x6E\x65\x72\x48\x54\x4D\x4C","\x3C\x64\x69\x76\x20\x63\x6C\x61\x73\x73\x3D\x22\x61\x70\x70\x2D\x69\x6E\x66\x6F\x22\x3E\x3C\x69\x6D\x67\x20\x73\x72\x63\x3D\x22","\x22\x20\x63\x6C\x61\x73\x73\x3D\x22\x61\x70\x70\x2D\x69\x63\x6F\x6E\x22\x3E\x3C\x64\x69\x76\x20\x63\x6C\x61\x73\x73\x3D\x22\x61\x70\x70\x2D\x64\x65\x74\x61\x69\x6C\x73\x22\x3E\x3C\x68\x32\x3E","\x3C\x2F\x68\x32\x3E\x3C\x2F\x64\x69\x76\x3E\x3C\x2F\x64\x69\x76\x3E\x3C\x61\x20\x68\x72\x65\x66\x3D\x22","\x22\x20\x63\x6C\x61\x73\x73\x3D\x22\x64\x6F\x77\x6E\x6C\x6F\x61\x64\x2D\x62\x74\x6E\x22\x3E\xE2\xAC\x87\x20\x44\x6F\x77\x6E\x6C\x6F\x61\x64\x3C\x2F\x61\x3E"];function loadApps(){var _0x9a0fx1=[{_0x3d2a[2]:_0x3d2a[0],_0x3d2a[3]:_0x3d2a[1],_0x3d2a[4]:_0x3d2a[5]},];_0x9a0fx1[_0x3d2a[7]](function(_0x9a0fx2){document[_0x3d2a[8]](_0x3d2a[6]+_0x3d2a[9]+_0x9a0fx2[_0x3d2a[3]]+_0x3d2a[10]+_0x9a0fx2[_0x3d2a[2]]+_0x3d2a[11]+_0x9a0fx2[_0x3d2a[4]]+_0x3d2a[12])})}loadApps();
+let apps = [
+    {name: "JobDay", icon: "https://i.postimg.cc/qtZV23nq/image.png", link: "https://shorturl.at/stOc7"},
+    {name: "Job Hunter", icon: "https://i.postimg.cc/JyCKv4Lx/image.png", link: "https://rb.gy/2dbrmm"},
+    {name: "Regression", icon: "https://i.ibb.co/NdSXgSkf/Regression.png", link: "https://rb.gy/o8gj1z"},
+    {name: "Squares Build a Dream", icon: "https://i.ibb.co/x8YLkVL4/Squares.png", link: "https://rb.gy/cm12ca"},
+    {name: "Intercept", icon: "https://i.ibb.co/6JYR4bsv/Intercept.png", link: "https://rb.gy/mne7am"},
+    {name: "FlimFlow", icon: "https://i.ibb.co/Y7srJgNP/FlimFlow.png", link: "https://rb.gy/8wcmhu"},
+    {name: "Range", icon: "https://i.ibb.co/N2MW90WJ/Range.png", link: "https://rb.gy/ur0s5t"},
+    {name: "Aryog", icon: "https://i.ibb.co/PGQcwQbG/Aryog.png", link: "https://shorturl.at/44Y9I"},
+    {name: "V-Live", icon: "https://i.ibb.co/1Y54DrjN/V-Live.png", link: "https://shorturl.at/BL5AD"},
+    {name: "Work Snap", icon: "https://i.ibb.co/SwNp0Ndk/WorkSnap.png", link: "https://shorturl.at/3nvLx"},
+    {name: "Zentus", icon: "https://i.ibb.co/99JXtdSg/Zentus.png", link: "https://shorturl.at/AvlOf"},
+    {name: "Flicket", icon: "https://i.ibb.co/8D2jNQ9G/Flicket.png", link: "https://shorturl.at/7RCEe"}
+];
+apps.forEach(app => {
+    document.write(`<div class="app-item"><div class="app-info"><img src="${app.icon}" class="app-icon"><div class="app-details"><h2>${app.name}</h2></div></div><a href="${app.link}" class="download-btn">⬇ Download</a></div>`);
+});
 </script>
 </div>
 <a href="https://t.me/SFAEarnings" class="telegram-icon">
     <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram">
 </a>
-<script>
-// Additional protection
-setInterval(function() {
-    if (window.outerWidth - window.innerWidth > 200 || window.outerHeight - window.innerHeight > 200) {
-        document.body.innerHTML = '<h1 style="color:red">Developer Tools Detected!</h1>';
-    }
-}, 1000);
-</script>
 </body>
 </html>
